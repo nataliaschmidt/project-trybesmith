@@ -18,6 +18,12 @@ const createProducts = async (req: Request, res: Response) => {
   res.status(mapStatusHTTP(status)).json(data);
 };
 
+const getProducts = async (_req: Request, res: Response) => {
+  const { status, data } = await productService.getProducts();
+  res.status(mapStatusHTTP(status)).json(data);
+};
+
 export default {
   createProducts,
+  getProducts,
 };

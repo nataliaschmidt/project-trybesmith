@@ -8,7 +8,9 @@ chai.use(chaiHttp);
 
 describe('GET /products', function () { 
   beforeEach(function () { sinon.restore(); });
+
 it('ao fazer uma requisição retorna a lista de produtos', async () => {
+  
   sinon.stub(ProductModel, 'findAll').resolves()
 
 

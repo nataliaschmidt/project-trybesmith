@@ -14,7 +14,7 @@ const getOrders = async (): Promise<ServiceResponse<OrderResultGetAll[]>> => {
     ],
   });
 
-  const result = orders.map((order) => 
+  const result = orders?.map((order) => 
     ({
       id: order.dataValues.id,
       userId: order.dataValues.userId,

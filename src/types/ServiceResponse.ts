@@ -1,4 +1,5 @@
-type ServiceResponseErrorType = 'INVALID_VALUE' | 'UNPROCESSABLE_ENTITY' | 'UNAUTHORIZED';
+type ServiceResponseErrorType =
+'INVALID_VALUE' | 'UNPROCESSABLE_ENTITY' | 'UNAUTHORIZED' | 'NOT_FOUND';
 
 export type ServiceResponseError = {
   status: ServiceResponseErrorType;

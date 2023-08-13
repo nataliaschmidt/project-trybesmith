@@ -7,6 +7,15 @@ const validateParams = (name: string, price: string): string | null => {
   return null;
 };
 
+const validateParamsOrder = (userId: number, productIds: number[]): string | null => {
+  if (typeof userId !== 'number') return '"userId" must be a number';
+  if (typeof productIds !== 'object') return '"productIds" must be an array';
+  if (productIds.length === 0) return '"productIds" must include only numbers';
+
+  return null;
+};
+
 export default {
   validateParams,
+  validateParamsOrder,
 };

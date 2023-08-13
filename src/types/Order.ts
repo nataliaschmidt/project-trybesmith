@@ -11,3 +11,8 @@ export type OrderResultGetAll = {
   userId: number;
   productIds?: number[];
 };
+
+export type CreateOrder = {
+  productIds: number[];
+  userId: number;
+};

@@ -1,37 +1,43 @@
-const orderListFindAll = [
+const orderListResultFindAll = [
   {
     "id": 1,
     "userId": 1,
-    "productIds": [
-      {
-        "id": 2
-      },
-      {
-        "id": 1
-      }
-    ]
+    "productIds": [1, 2]
   },
   {
     "id": 2,
-    "userId": 3,
-    "productIds": [
-      {
-        "id": 4
-      },
-      {
-        "id": 3
-      }
-    ]
+    "userId": 2,
+    "productIds": [3]
+  },
+]
+
+const orderBuildMock = [
+  {
+    "id": 1,
+    "userId": 1,
+    "productIds": [{
+      id: 1,
+      name: "Excalibur",
+      price: "10 peças de ouro",
+      orderId: 1
+    },
+    {
+      id: 2,
+      name: "Espada Justiceira",
+      price: "20 peças de ouro",
+      orderId: 1
+    }]
   },
   {
-    "id": 3,
+    "id": 2,
     "userId": 2,
-    "productIds": [
-      {
-        "id": 5
-      }
-    ]
-  }
+    "productIds": [{
+      id: 3,
+      name: "Lira de Orfeu",
+      price: "1 peça de ouro",
+      orderId: 2
+    }]
+  },
 ]
 
 const createProductvalid = {
@@ -81,7 +87,8 @@ const productIdEmptyArray = {
 }
 
 export default {
-  orderListFindAll,
+  orderBuildMock,
+  orderListResultFindAll,
   createProductvalid,
   noUserId,
   tokenPayload,

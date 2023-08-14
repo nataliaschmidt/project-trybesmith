@@ -30,6 +30,7 @@ const getOrders = async (): Promise<ServiceResponse<OrderResultGetAll[]>> => {
 const validateOrder = async (id: number, productIds: number[])
 : Promise<ServiceResponseError | null> => {
   const user = await UserModel.findOne({ where: { id } });
+  
   if (!user) return { status: 'NOT_FOUND', data: { message: '"userId" not found' } };
  
   const error = validateParams.validateParamsOrder(id, productIds);

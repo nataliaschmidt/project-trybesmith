@@ -17,6 +17,7 @@ const validateJwt = async (req: Request, res: Response, next: NextFunction) => {
 
   try {
     const payload: TokenPayload = jwtUtils.getPayload(token);
+    
     req.body.payload = payload;
     next();
   } catch (error) {

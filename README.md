@@ -1,4 +1,4 @@
-# Talker Manager
+# Trybesmith
 
 O objetivo do projeto é criar uma loja de itens medievais.
 
